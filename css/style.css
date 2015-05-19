@@ -272,9 +272,9 @@ a.goto-btn { margin-right: 30px }
 }
 /* Intro Section */
 #tf-intro {
-    background-color: #9966cc;
+    background-color: #faf9fa;
     padding: 5% 0;
-    color: #ffffff;
+    color: #000000;
     text-align: center;
 }
 #tf-intro img.intro-logo {
