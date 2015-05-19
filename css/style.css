@@ -347,7 +347,7 @@ a.goto-btn { margin-right: 30px }
     transition: background-color 0.5s;
 }
 .process:hover i.fa,
-.service:hover i.fa { background-color: #333333 }
+.service:hover i.fa { background-color: #a14d9d }
 h4.media-heading {
     margin-top: 0;
     margin-bottom: 5px;
