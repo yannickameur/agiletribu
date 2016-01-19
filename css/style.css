@@ -47,6 +47,9 @@ a:focus {
 .clearfix { display: inline-block }
 * html .clearfix { height: 1% }
 .clearfix { display: block }
+.label-default {
+    background-color: #308B86;
+}
 /* Navigation */
 #tf-menu {
     margin-bottom: 0;
@@ -120,6 +123,7 @@ a:focus {
     padding: 20% 0;
     background-attachment: fixed;
 }
+
 #tf-home h1 { color: #308b86 }
 .content-heading p.lead { margin-bottom: 80px }
 a.goto-btn {
@@ -862,6 +866,13 @@ ul.cat li a.active {
 .color:hover {
     border-color: #333333;
     background-color: #308b86;
+}
+/* Formateur Section */
+#tf-home .overlay-formateur {
+    padding: 5% 0;
+}
+.list-group-formateur {
+    padding: 0 20px;
 }
 /* Blog Section */
 #tf-blog,
