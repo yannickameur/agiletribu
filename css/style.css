@@ -871,6 +871,10 @@ ul.cat li a.active {
 #tf-home .overlay-formateur {
     padding: 5% 0;
 }
+
+#tf-home .overlay-formateur .container {
+    padding-top: 5%
+}
 .list-group-formateur {
     padding: 0 20px;
 }
