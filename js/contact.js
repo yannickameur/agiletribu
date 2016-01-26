@@ -10,7 +10,6 @@ $(function() {
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
-            var phone = $("input#phone").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
@@ -18,12 +17,13 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "../submit.php",
+                url: "http://bbl-backend.eu01.aws.af.cm/mail",
                 type: "POST",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
+                    from: email,
+                    to: "contact@agiletribu.com",
+                    subject: "Contact avec AgileTribu de "+name,
                     message: message
                 },
                 cache: false,
@@ -33,7 +33,7 @@ $(function() {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>Votre message a été envoyé. </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
@@ -45,7 +45,7 @@ $(function() {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                    $('#success > .alert-danger').append("<strong>Désolé " + firstName + ", il semblerait que notre serveur de mail ne répond plus. Merci de réessayer plus tard!");
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contact-form').trigger("reset");
